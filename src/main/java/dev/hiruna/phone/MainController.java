@@ -29,6 +29,14 @@ public class MainController {
     private Label txtStockAlerts;
 
     @FXML
+    void initialize() {
+        // Set the initial text values from the database
+        txtBrands.setText(String.valueOf(DatabaseConnection.getTotalBrands()));
+        txtModels.setText(String.valueOf(DatabaseConnection.getTotalModels()));
+        txtStock.setText(String.valueOf(DatabaseConnection.getTotalStock()));
+    }
+
+    @FXML
     void btnAddPhone(ActionEvent event) {
 
     }
@@ -45,7 +53,7 @@ public class MainController {
         Scene scene = new Scene(fxmlLoader.load());
         stage.getIcons().add(new Image(MainApplication.class.getResourceAsStream("assets/icon.png"))); // Set the icon of the application window
         stage.setResizable(false); // Disable window resize
-        stage.setTitle("Search - PhoneStock Tracker (Track Every Phone, Every Time)");
+        stage.setTitle("Smart Search - PhoneStock Tracker (Track Every Phone, Every Time)");
         stage.setScene(scene);
         stage.show();
     }
