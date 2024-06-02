@@ -37,8 +37,15 @@ public class MainController {
     }
 
     @FXML
-    void btnAddPhone(ActionEvent event) {
-
+    void btnAddPhone(ActionEvent event) throws IOException {
+        Stage stage = (Stage) this.root.getScene().getWindow();
+        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("add-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        stage.getIcons().add(new Image(MainApplication.class.getResourceAsStream("assets/icon.png"))); // Set the icon of the application window
+        stage.setResizable(false); // Disable window resize
+        stage.setTitle("Add New Phone - PhoneStock Tracker (Track Every Phone, Every Time)");
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML
