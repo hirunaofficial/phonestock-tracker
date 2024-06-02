@@ -23,7 +23,7 @@ public class SearchController {
         Scene scene = new Scene(fxmlLoader.load());
         stage.getIcons().add(new Image(MainApplication.class.getResourceAsStream("assets/icon.png"))); // Set the icon of the application window
         stage.setResizable(false); // Disable window resize
-        stage.setTitle("Search - PhoneStock Tracker (Track Every Phone, Every Time)");
+        stage.setTitle("PhoneStock Tracker (Track Every Phone, Every Time)");
         stage.setScene(scene);
         stage.show();
     }
