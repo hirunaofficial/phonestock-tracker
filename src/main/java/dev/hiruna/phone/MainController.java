@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class PSTController {
+public class MainController {
 
     @FXML
     private AnchorPane root;
@@ -41,12 +41,10 @@ public class PSTController {
     @FXML
     void btnSearch(ActionEvent event) throws IOException {
         Stage stage = (Stage) this.root.getScene().getWindow();
-        FXMLLoader fxmlLoader = new FXMLLoader(PSTApplication.class.getResource("search-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("search-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        // Set the icon of the application window
-        stage.getIcons().add(new Image(PSTApplication.class.getResourceAsStream("assets/icon.png")));
-        // Disable window resize
-        stage.setResizable(false);
+        stage.getIcons().add(new Image(MainApplication.class.getResourceAsStream("assets/icon.png"))); // Set the icon of the application window
+        stage.setResizable(false); // Disable window resize
         stage.setTitle("Search - PhoneStock Tracker (Track Every Phone, Every Time)");
         stage.setScene(scene);
         stage.show();

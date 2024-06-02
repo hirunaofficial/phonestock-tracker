@@ -8,14 +8,14 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class PSTApplication extends Application {
+public class MainApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(PSTApplication.class.getResource("main-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("main-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
 
         // Set the icon of the application window
-        stage.getIcons().add(new Image(PSTApplication.class.getResourceAsStream("assets/icon.png")));
+        stage.getIcons().add(new Image(MainApplication.class.getResourceAsStream("assets/icon.png")));
 
         // Disable window resize
         stage.setResizable(false);
