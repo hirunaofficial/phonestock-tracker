@@ -60,7 +60,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>dev.hiruna.phone/dev.hiruna.phone.HelloApplication</mainClass>
+                            <mainClass>dev.hiruna.phone/dev.hiruna.phone.PSTApplication</mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
                             <jlinkImageName>app</jlinkImageName>
