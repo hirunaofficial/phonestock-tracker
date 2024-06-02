@@ -60,17 +60,17 @@
       </AnchorPane>
       <Button alignment="CENTER" layoutX="68.0" layoutY="403.0" mnemonicParsing="false" onAction="#btnAddPhone" prefHeight="61.0" prefWidth="372.0" style="-fx-background-color: #990011; -fx-background-radius: 15; -fx-cursor: hand;" text="Add New Phone" textAlignment="CENTER" textFill="#fcf6f5">
          <font>
-            <Font name="System Bold" size="25.0" />
+            <Font name="System Bold" size="23.0" />
          </font>
       </Button>
       <Button alignment="CENTER" layoutX="68.0" layoutY="486.0" mnemonicParsing="false" onAction="#btnUpdatePhone" prefHeight="61.0" prefWidth="372.0" style="-fx-background-color: #990011; -fx-background-radius: 15; -fx-cursor: hand;" text="Update Phone Information" textFill="#fcf6f5">
          <font>
-            <Font name="System Bold" size="25.0" />
+            <Font name="System Bold" size="23.0" />
          </font>
       </Button>
       <Button alignment="CENTER" layoutX="68.0" layoutY="569.0" mnemonicParsing="false" onAction="#btnDeletePhone" prefHeight="61.0" prefWidth="372.0" style="-fx-background-color: #990011; -fx-background-radius: 15; -fx-cursor: hand;" text="Delete Phone" textFill="#fcf6f5">
          <font>
-            <Font name="System Bold" size="25.0" />
+            <Font name="System Bold" size="23.0" />
          </font>
       </Button>
       <AnchorPane layoutX="472.0" layoutY="320.0" prefHeight="310.0" prefWidth="399.0" style="-fx-background-color: #990011; -fx-background-radius: 15;">
@@ -103,7 +103,7 @@
       </AnchorPane>
       <Button alignment="CENTER" layoutX="68.0" layoutY="322.0" mnemonicParsing="false" onAction="#btnSearch" prefHeight="61.0" prefWidth="372.0" style="-fx-background-color: #990011; -fx-background-radius: 15; -fx-cursor: hand;" text="Smart Search" textFill="#fcf6f5">
          <font>
-            <Font name="System Bold" size="25.0" />
+            <Font name="System Bold" size="23.0" />
          </font>
       </Button>
    </children>
