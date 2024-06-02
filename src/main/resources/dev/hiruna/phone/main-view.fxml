@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="711.0" prefWidth="934.0" style="-fx-background-color: #FBEAEB;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dev.hiruna.phone.PSTController">
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="711.0" prefWidth="934.0" style="-fx-background-color: #FBEAEB;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dev.hiruna.phone.MainController">
    <children>
       <AnchorPane layoutX="292.0" layoutY="-115.0" prefHeight="196.0" prefWidth="351.0" style="-fx-background-color: #990011; -fx-background-radius: 45;">
          <children>
@@ -58,17 +58,17 @@
             </Label>
          </children>
       </AnchorPane>
-      <Button alignment="CENTER" layoutX="68.0" layoutY="403.0" mnemonicParsing="false" onAction="#btnAddPhone" prefHeight="61.0" prefWidth="372.0" style="-fx-background-color: #990011; -fx-background-radius: 15;" text="Add New Phone" textAlignment="CENTER" textFill="#fcf6f5">
+      <Button alignment="CENTER" layoutX="68.0" layoutY="403.0" mnemonicParsing="false" onAction="#btnAddPhone" prefHeight="61.0" prefWidth="372.0" style="-fx-background-color: #990011; -fx-background-radius: 15; -fx-cursor: hand;" text="Add New Phone" textAlignment="CENTER" textFill="#fcf6f5">
          <font>
             <Font name="System Bold" size="25.0" />
          </font>
       </Button>
-      <Button alignment="CENTER" layoutX="68.0" layoutY="486.0" mnemonicParsing="false" onAction="#btnUpdatePhone" prefHeight="61.0" prefWidth="372.0" style="-fx-background-color: #990011; -fx-background-radius: 15;" text="Update Phone Information" textFill="#fcf6f5">
+      <Button alignment="CENTER" layoutX="68.0" layoutY="486.0" mnemonicParsing="false" onAction="#btnUpdatePhone" prefHeight="61.0" prefWidth="372.0" style="-fx-background-color: #990011; -fx-background-radius: 15; -fx-cursor: hand;" text="Update Phone Information" textFill="#fcf6f5">
          <font>
             <Font name="System Bold" size="25.0" />
          </font>
       </Button>
-      <Button alignment="CENTER" layoutX="68.0" layoutY="569.0" mnemonicParsing="false" onAction="#btnDeletePhone" prefHeight="61.0" prefWidth="372.0" style="-fx-background-color: #990011; -fx-background-radius: 15;" text="Delete Phone" textFill="#fcf6f5">
+      <Button alignment="CENTER" layoutX="68.0" layoutY="569.0" mnemonicParsing="false" onAction="#btnDeletePhone" prefHeight="61.0" prefWidth="372.0" style="-fx-background-color: #990011; -fx-background-radius: 15; -fx-cursor: hand;" text="Delete Phone" textFill="#fcf6f5">
          <font>
             <Font name="System Bold" size="25.0" />
          </font>
@@ -101,7 +101,7 @@
             </Label>
          </children>
       </AnchorPane>
-      <Button alignment="CENTER" layoutX="68.0" layoutY="322.0" mnemonicParsing="false" onAction="#btnSearch" prefHeight="61.0" prefWidth="372.0" style="-fx-background-color: #990011; -fx-background-radius: 15;" text="Smart Search" textFill="#fcf6f5">
+      <Button alignment="CENTER" layoutX="68.0" layoutY="322.0" mnemonicParsing="false" onAction="#btnSearch" prefHeight="61.0" prefWidth="372.0" style="-fx-background-color: #990011; -fx-background-radius: 15; -fx-cursor: hand;" text="Smart Search" textFill="#fcf6f5">
          <font>
             <Font name="System Bold" size="25.0" />
          </font>
