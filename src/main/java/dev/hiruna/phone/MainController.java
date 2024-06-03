@@ -10,6 +10,8 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class MainController {
 
@@ -34,6 +36,23 @@ public class MainController {
         txtBrands.setText(String.valueOf(DatabaseConnection.getTotalBrands()));
         txtModels.setText(String.valueOf(DatabaseConnection.getTotalModels()));
         txtStock.setText(String.valueOf(DatabaseConnection.getTotalStock()));
+
+        // Get and display the details of phones with the lowest stock
+        try (ResultSet lowestStockPhones = DatabaseConnection.getLowestStockPhones()) {
+            if (lowestStockPhones != null) {
+                StringBuilder stockAlerts = new StringBuilder();
+                while (lowestStockPhones.next()) {
+                    String brand = lowestStockPhones.getString("brand");
+                    String model = lowestStockPhones.getString("model");
+                    int qty = lowestStockPhones.getInt("qty");
+                    stockAlerts.append("- ").append(brand).append(" ").append(model).append(" stock is running low!\n");
+                    stockAlerts.append("   (Only ").append(qty).append(" units remaining in stock)\n\n");
+                }
+                txtStockAlerts.setText(stockAlerts.toString());
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
