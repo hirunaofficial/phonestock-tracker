@@ -58,6 +58,14 @@ public class SearchController {
     @FXML
     void initialize() {
         txtSearch.setOnKeyPressed(this::handleKeyPressed);
+        colBrand.setCellValueFactory(new PropertyValueFactory<>("brand"));
+        colModel.setCellValueFactory(new PropertyValueFactory<>("model"));
+        colQty.setCellValueFactory(new PropertyValueFactory<>("qty"));
+        colColor.setCellValueFactory(new PropertyValueFactory<>("color"));
+        colRam.setCellValueFactory(new PropertyValueFactory<>("ram"));
+        colStorage.setCellValueFactory(new PropertyValueFactory<>("storage"));
+        colPrice.setCellValueFactory(new PropertyValueFactory<>("price"));
+        tblPhones.setItems(getPhoneData(""));
     }
 
     private void handleKeyPressed(KeyEvent event) {
