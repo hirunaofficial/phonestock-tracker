@@ -37,28 +37,27 @@
       </AnchorPane>
       <AnchorPane layoutX="44.0" layoutY="113.0" prefHeight="93.0" prefWidth="846.0" style="-fx-background-color: #990011; -fx-background-radius: 25;">
          <children>
-            <Button alignment="CENTER" layoutX="664.0" layoutY="27.0" mnemonicParsing="false" onAction="#btnDeletePhone" prefHeight="39.0" prefWidth="108.0" style="-fx-background-color: #fcf6f5; -fx-background-radius: 4;" text="Search" textFill="#990011">
+            <Button alignment="CENTER" layoutX="664.0" layoutY="27.0" mnemonicParsing="false" onAction="#btnSearch" prefHeight="39.0" prefWidth="108.0" style="-fx-background-color: #fcf6f5; -fx-background-radius: 4;" text="Search" textFill="#990011">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
             </Button>
-            <TextField layoutX="75.0" layoutY="27.0" prefHeight="39.0" prefWidth="560.0" promptText="Search by brand or model..." style="-fx-background-color: #fcf6f5; -fx-background-radius: 4;">
+            <TextField fx:id="txtSearch" layoutX="75.0" layoutY="27.0" prefHeight="39.0" prefWidth="560.0" promptText="Search by brand or model..." style="-fx-background-color: #fcf6f5; -fx-background-radius: 4;">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
             </TextField>
          </children>
       </AnchorPane>
-      <TableView layoutX="44.0" layoutY="226.0" prefHeight="406.0" prefWidth="846.0" style="-fx-background-color: #fcf6f5;">
+      <TableView fx:id="tblPhones" layoutX="44.0" layoutY="226.0" prefHeight="406.0" prefWidth="846.0" style="-fx-background-color: #fcf6f5;">
         <columns>
-          <TableColumn prefWidth="54.0" text="ID" />
-          <TableColumn prefWidth="121.0" text="Brand" />
-            <TableColumn prefWidth="152.0" text="Model" />
-            <TableColumn prefWidth="82.0" text="Quantity" />
-            <TableColumn prefWidth="140.0" text="Color" />
-            <TableColumn minWidth="0.0" prefWidth="60.0" text="Ram" />
-            <TableColumn prefWidth="91.0" text="Storage" />
-            <TableColumn prefWidth="145.0" text="Price" />
+          <TableColumn fx:id="colBrand" prefWidth="120.79998779296875" text="Brand" />
+            <TableColumn fx:id="colModel" prefWidth="214.39999389648438" text="Model" />
+            <TableColumn fx:id="colQty" prefWidth="83.20001220703125" text="Quantity" />
+            <TableColumn fx:id="colColor" prefWidth="112.79998779296875" text="Color" />
+            <TableColumn fx:id="colRam" minWidth="0.0" prefWidth="63.20001220703125" text="Ram" />
+            <TableColumn fx:id="colStorage" prefWidth="86.4000244140625" text="Storage" />
+            <TableColumn fx:id="colPrice" prefWidth="164.80002441406248" text="Price" />
         </columns>
       </TableView>
       <ImageView fitHeight="58.0" fitWidth="166.0" layoutX="44.0" layoutY="14.0" onMouseClicked="#btnBack" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
