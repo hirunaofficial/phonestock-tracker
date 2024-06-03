@@ -5,6 +5,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -13,6 +14,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -20,6 +22,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Optional;
 
 public class DeleteController {
 
@@ -76,6 +79,7 @@ public class DeleteController {
                     deletePhone(data.getId());
                     phoneList.remove(data);
                 });
+                StackPane.setAlignment(btn, Pos.CENTER);
             }
 
             @Override
@@ -84,10 +88,13 @@ public class DeleteController {
                 if (empty) {
                     setGraphic(null);
                 } else {
-                    setGraphic(btn);
+                    StackPane pane = new StackPane();
+                    pane.getChildren().add(btn);
+                    setGraphic(pane);
                 }
             }
         });
+
         phoneList = FXCollections.observableArrayList();
         tblPhones.setItems(phoneList);
         updateTable("");
@@ -106,15 +113,31 @@ public class DeleteController {
     }
 
     private void deletePhone(int id) {
-        try (Connection connection = DatabaseConnection.getConnection()) {
-            String query = "DELETE FROM phones WHERE id = ?";
-            PreparedStatement preparedStatement = connection.prepareStatement(query);
-            preparedStatement.setInt(1, id);
-            preparedStatement.executeUpdate();
-        } catch (SQLException e) {
-            e.printStackTrace();
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Confirmation Dialog");
+        alert.setHeaderText(null);
+        alert.setContentText("Are you sure you want to delete this phone?");
+
+        ButtonType buttonTypeYes = new ButtonType("Yes", ButtonBar.ButtonData.YES);
+        ButtonType buttonTypeNo = new ButtonType("No", ButtonBar.ButtonData.NO);
+
+        alert.getButtonTypes().setAll(buttonTypeYes, buttonTypeNo);
+
+        Optional<ButtonType> result = alert.showAndWait();
+        if (result.isPresent() && result.get() == buttonTypeYes) {
+            try (Connection connection = DatabaseConnection.getConnection()) {
+                String query = "DELETE FROM phones WHERE id = ?";
+                PreparedStatement preparedStatement = connection.prepareStatement(query);
+                preparedStatement.setInt(1, id);
+                preparedStatement.executeUpdate();
+                // If deletion is successful, remove the item from the list
+                phoneList.removeIf(phone -> phone.getId() == id);
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
     }
+
 
     private void updateTable(String searchText) {
         phoneList.clear();
