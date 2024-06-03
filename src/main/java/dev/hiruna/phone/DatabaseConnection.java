@@ -59,4 +59,16 @@ public class DatabaseConnection {
         }
         return 0;
     }
+
+    public static ResultSet getLowestStockPhones() {
+        String query = "SELECT brand, model, qty FROM phones ORDER BY qty ASC LIMIT 4";
+        try {
+            Connection connection = getConnection();
+            PreparedStatement statement = connection.prepareStatement(query);
+            return statement.executeQuery();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 }
