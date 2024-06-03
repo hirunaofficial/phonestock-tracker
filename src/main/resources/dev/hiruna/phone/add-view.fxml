@@ -35,7 +35,7 @@
       </AnchorPane>
       <AnchorPane layoutX="44.0" layoutY="113.0" prefHeight="535.0" prefWidth="846.0" style="-fx-background-color: #990011; -fx-background-radius: 25;">
          <children>
-            <Button alignment="CENTER" layoutX="346.0" layoutY="458.0" mnemonicParsing="false" onAction="#btnAddPhone" prefHeight="39.0" prefWidth="155.0" style="-fx-background-color: #fcf6f5; -fx-background-radius: 4;" text="Add Phone" textFill="#990011">
+            <Button alignment="CENTER" layoutX="346.0" layoutY="458.0" mnemonicParsing="false" onAction="#btnAddPhone" prefHeight="39.0" prefWidth="155.0" style="-fx-background-color: #fcf6f5; -fx-background-radius: 4; -fx-cursor: hand;" text="Add Phone" textFill="#990011">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
