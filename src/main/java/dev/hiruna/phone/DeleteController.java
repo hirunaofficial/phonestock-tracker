@@ -10,8 +10,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
@@ -54,10 +52,7 @@ public class DeleteController {
     private TableColumn<TBLPhones, Double> colPrice;
 
     @FXML
-    private TableColumn<TBLPhones, Void> colAction; // Define colAction
-
-    @FXML
-    private TextField txtSearch;
+    private TableColumn<TBLPhones, Void> colAction;
 
     private ObservableList<TBLPhones> phoneList;
 
