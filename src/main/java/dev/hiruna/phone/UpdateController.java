@@ -115,7 +115,11 @@ public class UpdateController {
             Stage stage = new Stage();
             stage.getIcons().add(new Image(MainApplication.class.getResourceAsStream("assets/icon.png")));
             stage.setResizable(false);
-            stage.setTitle("Update Phone - PhoneStock Tracker (Track Every Phone, Every Time)");
+
+            String brand = phone.getBrand();
+            String model = phone.getModel();
+            stage.setTitle("Update " + brand + " " + model + " - PhoneStock Tracker (Track Every Phone, Every Time)");
+
             stage.setScene(scene);
             stage.show();
         } catch (IOException e) {
