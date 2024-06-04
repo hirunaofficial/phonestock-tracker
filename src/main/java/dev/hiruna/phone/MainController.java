@@ -99,7 +99,7 @@ public class MainController {
         Scene scene = new Scene(fxmlLoader.load());
         stage.getIcons().add(new Image(Objects.requireNonNull(MainApplication.class.getResourceAsStream("assets/icon.png")))); // Set the icon of the application window
         stage.setResizable(false); // Disable window resize
-        stage.setTitle("Smart Search - PhoneStock Tracker (Track Every Phone, Every Time)");
+        stage.setTitle("Update Phone Information - PhoneStock Tracker (Track Every Phone, Every Time)");
         stage.setScene(scene);
         stage.show();
     }
