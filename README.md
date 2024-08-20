@@ -96,6 +96,6 @@ This project is licensed under the GNU General Public License v3.0 License - see
 
 ## Contact
 
-- Author: GD Hiruna
+- Author: Hiruna Gallage
 - Website: [hiruna.dev](https://hiruna.dev)
 - Email: [hello@hiruna.dev](mailto:hello@hiruna.dev)
